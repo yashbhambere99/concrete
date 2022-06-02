@@ -66,8 +66,15 @@ def main():
     st.title("Strength Of Cement")
     st.image("image1.jpg", width=700)
     #st.background-image("image2",width=1400)
-    st.markdown("image2",unsafe_allow_html=True)
     html_temp = """
+    <style>
+    body{
+    background-image:url('image2.jpg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    }
+    </style> 
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
     </div>
