@@ -66,7 +66,7 @@ def main():
     st.title("Strength Of Cement")
     st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
-    st.background(image)
+    st.image(image,caption='image2')
     html_temp = """
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
