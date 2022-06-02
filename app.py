@@ -66,7 +66,7 @@ def main():
     st.title("Strength Of Cement")
     st.image("image1.jpg", width=700)
     #st.background-image("image2",width=1400)
-    st.markdown("image2"unsafe_allow_html=True)
+    st.markdown("image2",unsafe_allow_html=True)
     html_temp = """
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
