@@ -66,8 +66,9 @@ def main():
     st.title("Strength Of Cement")
     #st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
-    st.image(image,caption='image2')
+    st.image(image)
     html_temp = """
+    <div style="background-image:"image2.jpg">
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
     </div>
@@ -106,18 +107,9 @@ def main():
 
     if st.button("About Author"):
         st.text("Name : Rohit Murkute")
-        st.text("Group Leader")
-        st.text("Email : mr324091@gmail.com")
-        st.text("Oragnization : Data Science Student at SPPU")
-
-        st.text("Name : Yash Bhambere")
-        st.text("Group Member")
-        st.text("Email : yashbhammbere99@gmail.com")
-        st.text("Oragnization : Data Science Student at SPPU")
-
+        st.text("Name : Yash Bhambere")       
         st.text("Name : Akshay Deshmukh")
-        st.text("Group Member")
-        st.text("Email : abdeshmukh232323@gmail.com")
+        
         st.text("Oragnization : Data Science Student at SPPU")
 
 
