@@ -64,7 +64,7 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 
 def main():
     st.title("Strength Of Cement")
-    st.image("image1.jpg", width=700)
+    #st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
     st.image(image,caption='image2')
     html_temp = """
