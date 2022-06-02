@@ -65,7 +65,7 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 def main():
     st.title("Strength Of Cement")
     st.image("image1.jpg", width=700)
-     <style>
+    <style>
     body{
     background-image:url('image2.jpg');
     background-repeat: no-repeat;
