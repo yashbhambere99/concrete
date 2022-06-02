@@ -65,7 +65,21 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 def main():
     st.title("Strength Of Cement")
     st.image("image1.jpg", width=700)
-    st.background("image2.jpg")
+    st.sidebar.markdown("side")
+    st.markdown(
+        """
+        <style>
+        .reportview-container{
+            background:url("image2.jpg")
+        }
+        .sidebar .sidebar-content{
+             background:url("image2.jpg")
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+            
     
     html_temp = """
     <div style="background-color:pink;padding:10px">
