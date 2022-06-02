@@ -65,16 +65,7 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 def main():
     st.title("Strength Of Cement")
     st.image("image1.jpg", width=700)
-    html_temp = """
-    <style>
-    body{
-    background-image:url('image2.jpg');
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-size:cover;
-    }
-    </style> 
-    """
+    body{background-image:url("image2.jpg");}
     html_temp = """
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
