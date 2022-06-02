@@ -68,20 +68,9 @@ def main():
     #st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
     st.image(image)
-    main.bg ="image2.jpg"
-    main_bg_ext = "jpg"
-
-    st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
+    
     html_temp = """
+    <Body background="image2.jpg"><br>
     <div style="background-image:"image2.jpg">
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
