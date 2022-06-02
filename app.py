@@ -68,7 +68,7 @@ def main():
     #st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
     st.image(image)
-    main_bg_ext = "jpg"
+    main_bg_ext = "image2.jpg"
 
     st.markdown(
     f"""
