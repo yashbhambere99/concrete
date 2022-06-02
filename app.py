@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 import streamlit as st
 from PIL import Image
+import base64
 
 pickle_in = open("finalized_model.sav", "rb")
 regressor = pickle.load(pickle_in)
@@ -67,6 +68,18 @@ def main():
     #st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
     st.image(image)
+    main_bg_ext = "jpg"
+
+    st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
     html_temp = """
     <div style="background-image:"image2.jpg">
     <div style="background-color:pink;padding:10px">
