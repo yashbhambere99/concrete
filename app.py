@@ -62,7 +62,27 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 
     return prediction[0]
 
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
+def set_jpg_as_page_bg(jpg_file):
+    bin_str = get_base64_of_bin_file(jpg_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/jpg;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
+
+set_jpg_as_page_bg('image2.jpg')
 def main():
     st.title("Strength Of Cement")
     #st.image("image1.jpg", width=700)
@@ -70,7 +90,7 @@ def main():
     st.image(image)
     
     html_temp = """
-    <Body background="image2.jpg"><br>
+    
     <div style="background-image:"image2.jpg">
     <div style="background-color:pink;padding:10px">
     <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
