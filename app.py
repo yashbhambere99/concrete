@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image
 import base64
 
-pickle_in = open("finalized_model.sav", "rb")
+pickle_in = open("cement_strength.pkl", "rb")
 regressor = pickle.load(pickle_in)
 
 
@@ -57,7 +57,7 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 
     """
 
-    prediction = regressor.predict(np.array([[Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticizer, Coarse_Aggregate, Fine_Aggregate, Age]]))
+    prediction = best_xgb_model.predict(np.array([[Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticizer, Coarse_Aggregate, Fine_Aggregate, Age]]))
 
     return prediction[0]
 
