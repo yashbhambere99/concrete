@@ -26,6 +26,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 set_background('image1.jpg')
+
 # @app.route('/predict',methods=["Get"])
 def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticizer, Coarse_Aggregate, Fine_Aggregate,Age):
     """Let's predict strength of cement.
@@ -100,7 +101,8 @@ def main():
     #st.image("image1.jpg", width=700)
     image=Image.open("image2.jpg")
     st.image(image)
-    
+    image2= Image.open("image1.jpg")
+    st.image(image2)
     html_temp = """
     
     <div style="background-image:"image2.jpg">
