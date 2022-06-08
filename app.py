@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image
 import base64
 
-pickle_in = open("cement_strength.pkl", "rb")
+pickle_in = open("finalized_model.sav", "rb")
 best_xgb_model = pickle.load(pickle_in)
 
 
