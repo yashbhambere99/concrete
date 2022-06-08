@@ -6,7 +6,7 @@ from PIL import Image
 import base64
 
 pickle_in = open("cement_strength.pkl", "rb")
-regressor = pickle.load(pickle_in)
+best_xgb_model = pickle.load(pickle_in)
 
 
 # @app.route('/')
