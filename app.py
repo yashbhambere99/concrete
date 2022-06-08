@@ -13,7 +13,19 @@ regressor = pickle.load(pickle_in)
 def welcome():
     return "Welcome All"
 
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
+set_background('image1.jpg')
 # @app.route('/predict',methods=["Get"])
 def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticizer, Coarse_Aggregate, Fine_Aggregate,Age):
     """Let's predict strength of cement.
