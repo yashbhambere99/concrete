@@ -71,7 +71,7 @@ def main():
     
     <div style="background-image:"image2.jpg">
     <div style="background-color:pink;padding:10px">
-    <h2 style="color:black;text-align:center;">Streamlit Cemenet Strength Prediction ML App </h2>
+    <h2 style="color:black;text-align:center;">Cemenet Strength Prediction App </h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
