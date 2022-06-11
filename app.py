@@ -6,7 +6,7 @@ from PIL import Image
 import base64
 
 pickle_in = open("finalized_model.sav", "rb")
-regressor = pickle.load(pickle_in)
+Xg.boost = pickle.load(pickle_in)
 
 
 # @app.route('/')
@@ -57,7 +57,7 @@ def predict_strength(Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticize
 
     """
 
-    prediction = regressor.predict(np.array([[Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticizer, Coarse_Aggregate, Fine_Aggregate, Age]]))
+    prediction = Xg.boost.predict(np.array([[Cement, Blast_Furnace_Slag, Fly_Ash, Water, Superplasticizer, Coarse_Aggregate, Fine_Aggregate, Age]]))
     print(prediction)
     return prediction[0]
 
